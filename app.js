@@ -23,7 +23,17 @@ function setup(){
     background(200);
     
     // draw a koordinatessystem with colours, you might use functions fill, rect and text
-    noStroke();
+    strokeWeight(3);
+    line(200, 0, 200, 400);
+    line(0, 200, 400, 200);
+    fill(26, 171, 227);
+    rect(0, 0, 200, 200);
+    fill(114, 180, 83);
+    rect(200, 0, 400, 200);
+    fill(175, 137, 250);
+    rect(0, 200, 200, 200);
+    fill(246, 160, 191);
+    rect(200, 200, 400, 400);
 
     
 }
