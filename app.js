@@ -46,7 +46,6 @@ function draw(){
     fill(0,0,0);
     if(showDot){
         var arr = getPosition(q1, q2, q3, q4, q5, q6, q7, q8);
-        print(arr[0]);
         var x = arr[0];
         var y = arr[1];
         var xCoordFix = x*scale+coordFix
@@ -54,7 +53,6 @@ function draw(){
         // draw dot from coordinates.
         fill(0,0,0);
         rect(x, y, 5, 5);
-        print(x);
     }
 }
 // Get answers from all 8 outputs
@@ -90,12 +88,24 @@ var placePressed = function(){
  * @param {Mod/Tra} y 
  */
 var persontyper = function(x, y){
-    // flere tilfælde
-    if (true/* lav boolsk udtryk */){
+    // Individualit
+    if (x < 200 && y < 200){
         document.getElementById ("d1").style.display="block";
         document.getElementById ("d2").style.display="none";
         document.getElementById ("d3").style.display="none";
         document.getElementById ("d4").style.display="none";
+    }
+// Egenhændig
+    else (x < 200 && y > 199){
+        
+    }
+// Solidarisk
+    else (x > 200 && y < 200){
+
+    }
+// Tradition
+    else (x > 200 && y > 200){
+
     }
 
 }
