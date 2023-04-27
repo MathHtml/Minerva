@@ -3,13 +3,13 @@ console.log("is called");
 
 var showDot = false;
 var q1 = Number(document.getElementById("q1").value); // Mod/Tra
-var q2 = 1; // Ide/Mat
-var q3 = 1; // Mod/Tra
-var q4 = 1; // Ide/Mat
-var q5 = 1; // Mod/Tra
-var q6 = 1; // Ide/Mat
-var q7 = 1; // Mod/Tra
-var q8 = 1; // Ide/Mat
+var q2 = Number(document.getElementById("q2").value); // Ide/Mat
+var q3 = Number(document.getElementById("q3").value); // Mod/Tra
+var q4 = Number(document.getElementById("q4").value); // Ide/Mat
+var q5 = Number(document.getElementById("q5").value); // Mod/Tra
+var q6 = Number(document.getElementById("q6").value); // Ide/Mat
+var q7 = Number(document.getElementById("q7").value); // Mod/Tra
+var q8 = Number(document.getElementById("q8").value); // Ide/Mat
 function setup(){ 
     // draw a koordinatessystem with colours
     // draw a point from getPosition
@@ -23,7 +23,17 @@ function setup(){
     background(200);
     
     // draw a koordinatessystem with colours, you might use functions fill, rect and text
-    noStroke();
+    strokeWeight(3);
+    line(200, 0, 200, 400);
+    line(0, 200, 400, 200);
+    fill(26, 171, 227);
+    rect(0, 0, 200, 200);
+    fill(114, 180, 83);
+    rect(200, 0, 400, 200);
+    fill(175, 137, 250);
+    rect(0, 200, 200, 200);
+    fill(246, 160, 191);
+    rect(200, 200, 400, 400);
 
     
 }
