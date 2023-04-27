@@ -46,12 +46,15 @@ function draw(){
     fill(0,0,0);
     if(showDot){
         var arr = getPosition(q1, q2, q3, q4, q5, q6, q7, q8);
-  
+        print(arr[0]);
         var x = arr[0];
         var y = arr[1];
         var xCoordFix = x*scale+coordFix
         var yCoordFix = ((y*scale-coordFix)**2)**0.5
         // draw dot from coordinates.
+        fill(0,0,0);
+        rect(x, y, 5, 5);
+        print(x);
     }
 }
 // Get answers from all 8 outputs
@@ -65,18 +68,19 @@ function draw(){
 var getPosition = function(q1, q2, q3, q4, q5, q6, q7, q8){
     var x = ((q2+q4+q6+q8)*100)/4-100
     var y = ((q1+q3+q5+q7)*100)/4-100
+    print(x);
     return [x, y];
 }
 var placePressed = function(){
     showDot=true;
     q1 = Number(document.getElementById("q1").value); // Mod/Tra
-    var q2 = Number(document.getElementById("q2").value); // Ide/Mat
-    var q3 = Number(document.getElementById("q3").value); // Mod/Tra
-    var q4 = Number(document.getElementById("q4").value); // Ide/Mat
-    var q5 = Number(document.getElementById("q5").value); // Mod/Tra
-    var q6 = Number(document.getElementById("q6").value); // Ide/Mat
-    var q7 = Number(document.getElementById("q7").value); // Mod/Tra
-    var q8 = Number(document.getElementById("q8").value); // Ide/Mat
+    q2 = Number(document.getElementById("q2").value); // Ide/Mat
+    q3 = Number(document.getElementById("q3").value); // Mod/Tra
+    q4 = Number(document.getElementById("q4").value); // Ide/Mat
+    q5 = Number(document.getElementById("q5").value); // Mod/Tra
+    q6 = Number(document.getElementById("q6").value); // Ide/Mat
+    q7 = Number(document.getElementById("q7").value); // Mod/Tra
+    q8 = Number(document.getElementById("q8").value); // Ide/Mat
     var arr = getPosition(q1, q2, q3, q4, q5, q6, q7, q8);
     persontyper(arr[0], arr[1]);
 }
