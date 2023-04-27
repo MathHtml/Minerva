@@ -70,18 +70,18 @@ var getPosition = function(q1, q2, q3, q4, q5, q6, q7, q8){
 var placePressed = function(){
     showDot=true;
     q1 = Number(document.getElementById("q1").value); // Mod/Tra
-    var q2 = 1; // Ide/Mat
-    var q3 = 1; // Mod/Tra
-    var q4 = 1; // Ide/Mat
-    var q5 = 1; // Mod/Tra
-    var q6 = 1; // Ide/Mat
-    var q7 = 1; // Mod/Tra
-    var q8 = 1; // Ide/Mat
+    var q2 = Number(document.getElementById("q2").value); // Ide/Mat
+    var q3 = Number(document.getElementById("q3").value); // Mod/Tra
+    var q4 = Number(document.getElementById("q4").value); // Ide/Mat
+    var q5 = Number(document.getElementById("q5").value); // Mod/Tra
+    var q6 = Number(document.getElementById("q6").value); // Ide/Mat
+    var q7 = Number(document.getElementById("q7").value); // Mod/Tra
+    var q8 = Number(document.getElementById("q8").value); // Ide/Mat
     var arr = getPosition(q1, q2, q3, q4, q5, q6, q7, q8);
     persontyper(arr[0], arr[1]);
 }
 /**
- * Vi den rigtige tekste afhængig af fortegn på x og y
+ * Vælg den rigtige tekste afhængig af fortegn på x og y
  * @param {Ide/Mat} x 
  * @param {Mod/Tra} y 
  */
