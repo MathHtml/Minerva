@@ -88,12 +88,24 @@ var placePressed = function(){
  * @param {Mod/Tra} y 
  */
 var persontyper = function(x, y){
-    // Individualit
-    if (true){
+    // flere tilfælde
+    if (true/* lav boolsk udtryk */){
         document.getElementById ("d1").style.display="block";
         document.getElementById ("d2").style.display="none";
         document.getElementById ("d3").style.display="none";
         document.getElementById ("d4").style.display="none";
+    }
+// Egenhændig
+    else (x < 200 && y > 199){
+        
+    }
+// Solidarisk
+    else (x > 200 && y < 200){
+
+    }
+// Tradition
+    else (x > 200 && y > 200){
+
     }
 
 }
