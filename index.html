@@ -15,7 +15,57 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Minervamodellen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Hjem <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Om os</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Modellerne
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Tryk ej!</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
     <h1>Minervamodellen</h1>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          Udregningsmodel
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Logistisk</a>
+          <a class="dropdown-item" href="#">Eksponentiel</a>
+          <a class="dropdown-item" href="#">Lineær</a>
+          <a class="dropdown-item" href="#">Tilpassset</a>
+        </div>
+      </div>
+
     <p>Svar på de 8 spørgsmål og bliv placeret i minervamodellen.</p>
     <!--Indsæt 8 spørgsmål og svarbokse her -->
     <p>Hvor enig er du med at: Brug af ChatBot burde forbydes i undervisningen?</p>
@@ -63,26 +113,49 @@
     <p>Hvilket Samfund passer dig bedst?</p>
     <p>4 - Et Samfund, hvor maskiner udfører alle borgernes arbejde, og alle mennesker lever ligestillet, i harmoni</p>
     <p>3 - Et Samfund, uden konflikter, hvor maskiner er drivkraft for menneskets innovation</p>
-    <p>2 - Et Samfund, hvor </p>
+    <p>2 - Et Samfund, hvor menneskets intelligens og maskiners udførelse, danner status i verden</p>
     <p>1 - Et Samfund, hvor mennesket egenskaber er centrale i kampen om teknologiudvikling<p>
     <input class="form-control-inline" type="number" id="q8" value="1" min="1" max="4">
     
     <!-- Visning  af resultat -->
     <p id="d1" style="display: none">
-        Du er ...
+        Du er Individualist!
     </p>
     <p id="d2" style="display: none">
-        Du er ...
+        Du er Solidarisk!
     </p>
     <p id="d3" style="display: none">
-        Du er ...
+        Du er Egenhændig!
     </p>
     <p id="d4" style="display: none">
-        Du er ...
+        Du er Traditionel!
     </p>
     <button class="btn btn-success" type="button" id="place" onclick="placePressed()">Placér mig</button>
 
+      <button class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </button>
+
     <script src="app.js"></script>
+
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We would never share your email with anyone else. We totally promise!</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
 </body>
 
 </html>
