@@ -95,18 +95,6 @@ var persontyper = function(x, y){
         document.getElementById ("d3").style.display="none";
         document.getElementById ("d4").style.display="none";
     }
-// Egenhændig
-    else (x < 200 && y > 199){
-        
-    }
-// Solidarisk
-    else (x > 200 && y < 200){
-
-    }
-// Tradition
-    else (x > 200 && y > 200){
-
-    }
 
 }
 console.log("JavaScript finished");
